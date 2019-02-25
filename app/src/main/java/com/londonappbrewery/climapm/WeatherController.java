@@ -10,23 +10,20 @@ import android.widget.TextView;
 public class WeatherController extends AppCompatActivity {
 
     // Constants:
-    final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather";
+    private final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather";
     // App ID to use OpenWeather data
-    final String APP_ID = "e72____PLEASE_REPLACE_ME_____13";
-    // Time between location updates (5000 milliseconds or 5 seconds)
-    final long MIN_TIME = 5000;
-    // Distance between location updates (1000m or 1km)
-    final float MIN_DISTANCE = 1000;
+    private final String APP_ID = "e72____PLEASE_REPLACE_ME_____13";
+    private final long MIN_TIME = 5000; // Time btw location updates (5000 milliseconds or 5s)
+    private final float MIN_DISTANCE = 1000; // Distance btw location updates (1000m or 1km)
 
     // TODO: Set LOCATION_PROVIDER here:
 
 
 
-
     // Member Variables:
-    TextView mCityLabel;
-    ImageView mWeatherImage;
-    TextView mTemperatureLabel;
+    private TextView mCityLabel;
+    private ImageView mWeatherImage;
+    private TextView mTemperatureLabel;
 
     // TODO: Declare a LocationManager and a LocationListener here:
 
@@ -37,10 +34,10 @@ public class WeatherController extends AppCompatActivity {
         setContentView(R.layout.weather_controller_layout);
 
         // Linking the elements in the layout to Java code
-        mCityLabel = (TextView) findViewById(R.id.locationTV);
-        mWeatherImage = (ImageView) findViewById(R.id.weatherSymbolIV);
-        mTemperatureLabel = (TextView) findViewById(R.id.tempTV);
-        ImageButton changeCityButton = (ImageButton) findViewById(R.id.changeCityButton);
+        mCityLabel = findViewById(R.id.locationTV);
+        mWeatherImage = findViewById(R.id.weatherSymbolIV);
+        mTemperatureLabel = findViewById(R.id.tempTV);
+        ImageButton changeCityButton = findViewById(R.id.changeCityButton);
 
 
 
